@@ -1,0 +1,222 @@
+/* ═══════════════════════════════════════════════════════════════
+   Portrait — hero right column
+   ═══════════════════════════ shift around ═══════════════════════════ */
+
+.portrait-stage {
+  position: relative;
+  width: min(400px, 82%);
+  max-width: 420px;
+  margin-inline: auto;
+  aspect-ratio: 4 / 5;
+}
+
+/* Soft ambient glow behind the card */
+.portrait-halo {
+  position: absolute;
+  inset: -14%;
+  border-radius: 50%;
+  background:
+    radial-gradient(closest-side, rgba(91, 140, 255, 0.22), transparent 70%),
+    radial-gradient(closest-side at 70% 75%, rgba(139, 92, 246, 0.16), transparent 72%);
+  filter: blur(6px);
+  pointer-events: none;
+}
+
+/* Thin technical orbit rings around the portrait */
+.portrait-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  pointer-events: none;
+}
+.portrait-ring.r1 {
+  inset: -7% -3%;
+  border-color: rgba(91, 140, 255, 0.22);
+  border-top-color: rgba(34, 211, 238, 0.55);
+  animation: ring-spin 26s linear infinite;
+}
+.portrait-ring.r2 {
+  inset: -13% -9%;
+  border-color: rgba(139, 162, 202, 0.12);
+  border-bottom-color: rgba(139, 92, 246, 0.4);
+  animation: ring-spin 38s linear infinite reverse;
+}
+@keyframes ring-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── Glass card ────────────────────────────────────────────────── */
+.portrait-card {
+  position: absolute;
+  inset: 0;
+  border-radius: 26px;
+  padding: 12px;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02) 40%, rgba(91, 140, 255, 0.06));
+  border: 1px solid rgba(139, 162, 202, 0.22);
+  box-shadow:
+    0 30px 80px -30px rgba(0, 0, 0, 0.85),
+    0 0 60px -22px rgba(91, 140, 255, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Fine technical corner ticks */
+.corner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid rgba(34, 211, 238, 0.65);
+  pointer-events: none;
+}
+.corner.tl {
+  top: -5px;
+  left: -5px;
+  border-right: 0;
+  border-bottom: 0;
+  border-top-left-radius: 8px;
+}
+.corner.tr {
+  top: -5px;
+  right: -5px;
+  border-left: 0;
+  border-bottom: 0;
+  border-top-right-radius: 8px;
+}
+.corner.bl {
+  bottom: -5px;
+  left: -5px;
+  border-right: 0;
+  border-top: 0;
+  border-bottom-left-radius: 8px;
+}
+.corner.br {
+  bottom: -5px;
+  right: -5px;
+  border-left: 0;
+  border-top: 0;
+  border-bottom-right-radius: 8px;
+}
+
+.portrait-media {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 17px;
+  overflow: hidden;
+  background: var(--bg-2);
+}
+.portrait-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 22%;
+  display: block;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+/* Feathered edge vignette to blend photo into the frame */
+.portrait-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 46px rgba(4, 6, 11, 0.55);
+  pointer-events: none;
+}
+/* Cursor-following light — diagonal wash, weak over center */
+.portrait-glare {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    340px circle at var(--gx, 70%) var(--gy, 18%),
+    rgba(120, 180, 255, 0.16),
+    transparent 55%
+  );
+  mix-blend-mode: screen;
+}
+
+/* ── HUD labels (edges only) ───────────────────────────────────── */
+.hud {
+  position: absolute;
+  z-index: 3;
+  color: var(--ink-body);
+  background: rgba(7, 10, 18, 0.72);
+  border: 1px solid rgba(91, 140, 255, 0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 0.32rem 0.6rem;
+  border-radius: 7px;
+  letter-spacing: 0.14em;
+  font-size: 0.58rem;
+  pointer-events: none;
+}
+.hud-name {
+  bottom: 14px;
+  left: 14px;
+  color: var(--ink-hi);
+}
+.hud-side {
+  top: 18px;
+  right: -10px;
+  color: var(--accent-2);
+  font-size: 0.52rem;
+}
+.hud-status {
+  top: -12px;
+  left: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #6ee7b7;
+  font-size: 0.52rem;
+}
+.hud-status .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 8px rgba(52, 211, 153, 0.9);
+}
+
+/* ── Hero split layout ─────────────────────────────────────────── */
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
+}
+.hero-copy {
+  min-width: 0;
+}
+
+@media (max-width: 980px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 2.6rem;
+  }
+  .portrait-stage {
+    order: -1;
+    width: min(320px, 78%);
+    margin-top: 0.6rem;
+  }
+  .hud-side {
+    right: 4px;
+  }
+  /* Calm the effects on mobile for performance */
+  .portrait-ring,
+  .portrait-halo {
+    animation: none;
+  }
+  .portrait-ring.r2 {
+    display: none; /* would overflow narrow viewports */
+  }
+  .portrait-halo {
+    inset: -8%;
+  }
+}
