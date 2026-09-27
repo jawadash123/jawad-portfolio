@@ -10,7 +10,7 @@ import Lazy3D from '../components/three/Lazy3D'
 const NeuralCore = lazy(() => import('../components/three/NeuralCore'))
 const LowPolyScene = lazy(() => import('../components/three/LowPolyScene'))
 
-const roleParts = ['Software Engineer', 'AI · Machine Learning', 'Computer Vision']
+const roleParts = ['Computer Science', 'AI · Machine Learning', 'Computer Vision']
 
 const titleVariants = {
   hidden: { y: '110%' },

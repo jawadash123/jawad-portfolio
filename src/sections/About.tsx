@@ -45,7 +45,7 @@ export default function About() {
       <div className="about-grid">
         <Reveal>
           <p className="about-lead">
-            I’m <strong>{site.name}</strong> — a software engineer focused on{' '}
+            I’m <strong>{site.name}</strong> — a computer science graduate focused on{' '}
             <span className="grad-text" style={{ fontWeight: 600 }}>
               AI, machine learning, computer vision
             </span>{' '}

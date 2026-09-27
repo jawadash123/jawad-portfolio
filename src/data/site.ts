@@ -6,11 +6,11 @@
 export const site = {
   name: 'Muhammad Jawad Ali',
   monogram: 'JA',
-  role: 'Software Engineer',
+  role: 'Computer Science',
   disciplines: ['AI', 'Machine Learning', 'Computer Vision'],
   location: 'Lahore, Pakistan',
   intro:
-    'I build intelligent software systems at the intersection of AI, computer vision and modern full-stack engineering.',
+    'I build AI-powered applications — multi-tenant RAG support platforms, real-time cricket analytics with YOLO ball tracking, and computer-vision systems for plate and emotion detection — shipped full-stack with Python, FastAPI and Next.js.',
   email: 'jawadaliofficial.dev@gmail.com',
   phone: '+92 322 40 82 766',
   /**

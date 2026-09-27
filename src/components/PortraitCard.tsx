@@ -84,7 +84,7 @@ export default function PortraitCard() {
 
         {/* HUD labels — bottom/side edges only, never over the face */}
         <span className="hud hud-name mono" aria-hidden="true">
-          M.JAWAD&nbsp;ALI
+          PYTHON&nbsp;· PYTORCH&nbsp;· FASTAPI
         </span>
         <span className="hud hud-side mono" aria-hidden="true">
           AI · ML · COMPUTER VISION

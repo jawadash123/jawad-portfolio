@@ -50,7 +50,7 @@
   border-radius: 50%;
   border: 1px solid rgba(91, 140, 255, 0.45);
   background:
-    radial-gradient(circle at 35% 30%, rgba(91, 140, 255, 0.3), rgba(10, 14, 24, 0.9) 70%);
+    radial-gradient(circle at 35% 30%, rgba(91, 140, 255, 0.3), rgba(16, 21, 34, 0.9) 70%);
   box-shadow:
     0 0 44px -6px rgba(91, 140, 255, 0.45),
     inset 0 0 24px rgba(91, 140, 255, 0.18);
@@ -134,7 +134,7 @@
   padding: 0.5rem 0.9rem;
   border-radius: 10px;
   border: 1px solid var(--line-14);
-  background: rgba(8, 12, 22, 0.75);
+  background: rgba(14, 19, 31, 0.75);
   backdrop-filter: blur(6px);
   color: var(--ink-body);
   font-size: 0.64rem;

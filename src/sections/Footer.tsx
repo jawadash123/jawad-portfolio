@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="container footer-inner">
         <div>
           <p className="name">{site.name}</p>
-          <p className="tag">Software Engineer | AI • ML • Computer Vision</p>
+          <p className="tag">Computer Science | AI • ML • Computer Vision</p>
         </div>
         <div className="footer-right">
           <a
