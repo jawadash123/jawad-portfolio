@@ -4,12 +4,56 @@ export interface Experience {
   role: string
   period: string
   duration: string
+  location?: string
   summary: string
   points: string[]
   tags: string[]
 }
 
 export const experience: Experience[] = [
+  {
+    id: 'hubble42-aiml',
+    org: 'Hubble42',
+    role: 'AI/ML Engineer',
+    period: 'July 2026 \u2013 Present',
+    duration: 'Ongoing',
+    location: 'Lahore, Pakistan',
+    summary: 'Real-world AI/ML engineering and client coding tasks.',
+    points: [
+      'Developing and debugging Python-based solutions',
+      'Using AI-assisted development tools, including Claude, Cursor, OpenCode and GLM',
+      'Testing, debugging and validating solutions through structured evaluation workflows',
+      'Working within software development and quality-control processes',
+    ],
+    tags: [
+      'Python',
+      'Machine Learning',
+      'AI-Assisted Development',
+      'Debugging',
+      'Software Testing',
+      'Quality Assurance',
+    ],
+  },
+  {
+    id: 'invisica-fullstack-ai',
+    org: 'Invisica Tech (Pvt) Ltd',
+    role: 'Full Stack AI Development Intern',
+    period: 'January 2026 \u2013 June 2026',
+    duration: '6 mos',
+    location: 'Lahore, Pakistan',
+    summary: 'Full-stack development with machine learning models built and integrated into web applications.',
+    points: [
+      'Developed AI-powered web applications across frontend, backend and ML integration',
+      'Built and connected REST APIs between ML models and the application',
+    ],
+    tags: [
+      'Full Stack Development',
+      'Artificial Intelligence',
+      'Machine Learning',
+      'Python',
+      'REST APIs',
+    ],
+  },
   {
     id: 'nexskill-ds',
     org: 'NexSkill',

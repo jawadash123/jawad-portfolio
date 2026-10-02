@@ -8,7 +8,7 @@ export default function Experience() {
       <SectionHeader
         kicker="Experience"
         title="Where I’ve worked"
-        sub="Internships at NexSkill across data science and front-end development — hover a role to see the details."
+        sub="AI/ML engineering, full-stack internships and development roles — hover a role to see the details."
       />
 
       <div className="timeline">
@@ -24,6 +24,7 @@ export default function Experience() {
                   <span className="tl-org">@ {job.org}</span>
                   <span className="tl-period">
                     {job.period} · {job.duration}
+                    {job.location && <span className="tl-loc"> · {job.location}</span>}
                   </span>
                 </div>
                 <p className="tl-summary">{job.summary}</p>
